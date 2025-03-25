@@ -14,6 +14,8 @@
     --greyish-turquoise: #5e7a7d; 
     --black-squezze:#f3f9fa;
     --sherpa-blue: #00474b;
+    --topaz: #26c2ae;
+    --bettle-green: #547878;
 }
 
 body{
@@ -41,12 +43,21 @@ main{
      color: var(--greyish-turquoise);
     }
 
+    div{
+        margin-bottom: 3.2rem;
+    }
+
     .input-box{
         margin-top: .6rem;
         background: var(--black-squezze);
         display: flex;
         align-items: center;
         padding: .6rem 1.8rem;
+        border-radius: 5px;
+        
+        &:has(input:focus){
+            outline: 2px solid var(--topaz);
+        }
 
         input{
             border: none;
@@ -64,5 +75,45 @@ main{
 
         }
     }
+
+    .tip {
+        div{
+            margin-top: 1.6rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+
+            button{
+                font-size: 2.4rem;
+                font-weight: 700;
+                color: var(--white);
+                border: none;
+                background: var(--sherpa-blue);
+                padding-block: .6rem;
+                border-radius: .5rem;
+            }
+
+            input{
+                width: 100%;
+                background-color: var(--black-squezze);
+                color: var(--sherpa-blue);
+                text-align: center;
+                border: none;
+                padding-block: .6rem;
+                border-radius: .5rem;
+                font-size: 2.4rem;
+                font-weight: 700;
+
+                &::placeholder{
+                    color: var(--bettle-green);
+                }
+
+                &:focus{
+                    outline: 2px solid var(--topaz);
+                }
+            }
+        }
+    }
+    
 }
 
