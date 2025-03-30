@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <img src="./images/logo.svg" alt="tip calculalotor logo">
@@ -18,50 +20,51 @@
                 <strong>Bill</strong>
 
                 <div class="input-box">
-                <img src="./images/icon-dollar.svg" alt="icon dollar">
-                <input oninput="receiveBillValue" type="number" id="bill" placeholder="0">
-            </div>
+                    <img src="./images/icon-dollar.svg" alt="icon dollar">
+                    <input oninput="receiveBillValue" type="number" id="bill" placeholder="0">
+                </div>
             </div>
 
             <div class="tip">
                 <strong>Select Tip %</strong>
-            
 
-            <div>
-                <button>5%</button>
-                <button>10%</button>
-                <button>15%</button>
-                <button>25%</button>
-                <button>50%</button>
-                <input oninput="reciveNumberOfPeopleValue" type="number" id="custom-tip" placeholder="Custom">
+
+                <div>
+                    <button class="button-selected" id="button-5" onclick="reciveTipPercentageValue(5)">5%</button>
+                    <button class="button-selected" id="button-10" onclick="reciveTipPercentageValue(10)">10%</button>
+                    <button class="button-selected" id="button-15" onclick="reciveTipPercentageValue(15)">15%</button>
+                    <button class="button-selected" id="button-25" onclick="reciveTipPercentageValue(25)">25%</button>
+                    <button class="button-selected" id="button-50" onclick="reciveTipPercentageValue(50)">50%</button>
+                    <input oninput="reciveNumberOfPeopleValue" type="number" id="custom-tip" placeholder="Custom">
+                </div>
             </div>
-        </div>
 
-        <div class="people">
-            <strong>Bill</strong>
+            <div class="people">
+                <strong>Bill</strong>
 
-            <div class="input-box">
-            <img src="./images/icon-person.svg" alt="icon Person">
-            <input type="number" id="bill" placeholder="0">
-        </div>
+                <div class="input-box">
+                    <img src="./images/icon-person.svg" alt="icon Person">
+                    <input type="number" id="bill" placeholder="0">
+                </div>
         </section>
         <section class="results">
-       <div>
-        <div class="amout">
-            <p>Tip Amount <br> <span>/ person</span></p>
-            <strong>$0.00</strong>
-        </div>
+            <div>
+                <div class="amout">
+                    <p>Tip Amount <br> <span>/ person</span></p>
+                    <strong>$0.00</strong>
+                </div>
 
-        <div class="total">
-            <p>Total <br> <span>/ person</span></p>
-            <strong>$0.00</strong>
-        </div>
-       </div>
+                <div class="total">
+                    <p>Total <br> <span>/ person</span></p>
+                    <strong>$0.00</strong>
+                </div>
+            </div>
 
             <button>Reset</button>
 
         </section>
-        
+
     </main>
 </body>
+
 </html>
