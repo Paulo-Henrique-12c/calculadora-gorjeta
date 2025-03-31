@@ -49,7 +49,9 @@ if(bill !== 0 && tipPercentage !== 0 && numberOfPeople !== 0){
   let tipAmountPerson = (bill * tipPercentage) / numberOfPeople
   amountStrong.innerText = `$${tipAmountPerson.toFixed(2)}`
 
-  let totalStrong = 
+  let totalStrong = document.querySelector(".total strong")
+  let totalPerson = (bill / numberOfPeople) + tipAmountPerson 
+  totalStrong.innerText = `$${totalPerson.toFixed(2)}`
 }
   else{
     console.log("preencha tudo")
