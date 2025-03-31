@@ -21,7 +21,7 @@
 
                 <div class="input-box">
                     <img src="./images/icon-dollar.svg" alt="icon dollar">
-                    <input oninput="receiveBillValue" type="number" id="bill" placeholder="0">
+                    <input oninput="receiveBillValue()" type="number" id="people" placeholder="0">
                 </div>
             </div>
 
@@ -35,7 +35,7 @@
                     <button  id="button-15" onclick="reciveTipPercentageValue(15)">15%</button>
                     <button  id="button-25" onclick="reciveTipPercentageValue(25)">25%</button>
                     <button  id="button-50" onclick="reciveTipPercentageValue(50)">50%</button>
-                    <input oninput="reciveNumberOfPeopleValue" type="number" id="custom-tip" placeholder="Custom">
+                    <input oninput="reciveNumberOfPeopleValue()" type="number" id="custom-tip" placeholder="Custom">
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
                 </div>
             </div>
 
-            <button>Reset</button>
+            <button onclick="reset()">Reset</button>
 
         </section>
 
