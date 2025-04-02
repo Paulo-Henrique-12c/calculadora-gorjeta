@@ -3,7 +3,7 @@ let tipPercentage = 0
 let numberOfPeople = 0
 let buttonSelected = null
 
-function receiveBillValue(){
+function reciveBillValue(){
     bill = document.querySelector("#bill").valueAsNumber
     calculate()
 
@@ -16,11 +16,13 @@ function reciveNumberOfPeopleValue(){
 
 function reciveTipPercentageValue(value){
   removeButtonSelectedClass()
-  let customTipInput = document.querySelector("#custom-tip").value
+  let customTipInput = document.querySelector("#custom-tip").valueAsNumber
 
   if(customTipInput !== ""){
     customTipInput.value = ""
   }
+
+  console.log(tipPercentage)
 
   tipPercentage = value / 100
 
@@ -63,7 +65,7 @@ function reset(){
 
   let customTipInput = document.querySelector("#custom-tip").value
 
-  if(customTipInput !== ""){
+  if(customTipInput.value !== ""){
     customTipInput.value = ""
   }
 
