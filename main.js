@@ -56,19 +56,18 @@ if(bill !== 0 && tipPercentage !== 0 && numberOfPeople !== 0){
 function reset(){
   bill = 0
   document.querySelector("#bill").value = ""
-
+  
+  
+ 
   numberOfPeople = 0
   document.querySelector("#people").value = ""
 
   tipPercentage = 0
   removeButtonSelectedClass()
 
-  let customTipInput = document.querySelector("#custom-tip").value
+  let customTipInput = document.querySelector("#custom-tip").value = ""
 
-  if(customTipInput.value !== ""){
-    customTipInput.value = ""
-  }
-
+ 
   document.querySelector(".amount strong").innerText = "$0.00"
   document.querySelector(".total strong").innerText = "$0.00"
 }
